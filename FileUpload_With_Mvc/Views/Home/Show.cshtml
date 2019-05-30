@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>karakusnavy - Github</title>
+    @* Github: karakusnavy
+        Mail: karakusnavy@gmail.com
+    *@
+    <style>
+        table tr td {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        table {
+            border: 1px solid lightgray;
+        }
+    </style>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <table style="margin:20px">
+        <tr>
+            <td>
+               Your Image :
+            </td>
+            <td>
+                <img src="~/Content/@ViewBag.Image" />
+            </td>
+        </tr>      
+    </table>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

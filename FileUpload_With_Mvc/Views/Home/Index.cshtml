@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>karakusnavy - Github</title>
+    @* Github: karakusnavy
+         Mail: karakusnavy@gmail.com
+    *@
+    <style>
+        table tr td {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding:5px;
+        }
+        table{
+            border:1px solid lightgray;
+        }
+    </style>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("Index", "HomeController", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+    <table style="margin:20px">
+
+        <tr>
+            <td>
+                @{
+                    if (ViewBag.Error != null)
+                    {
+                        <p style="color:red">@ViewBag.Error</p>
+                    }
+                    else
+                    {
+                        <p style="color:green">Github: karakusnavy</p>
+                    }
+                }
+
+
+            </td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>
+                Select A Image(just PNG, GIF, JPG, JPEG) :
+            </td>
+            <td>
+                <input type="file" name="image" class="input-group" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Process
+            </td>
+            <td>
+                <input type="submit" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+
+    }
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+</html>
